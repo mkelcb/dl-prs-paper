@@ -1,0 +1,89 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7346f457-e99a-404f-8b1f-3bd0bf2d245a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Knet.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Knet</Name>
+    <RootNamespace>Knet</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="cmFilter.py" />
+    <Compile Include="com\application\logic\knet\im2col\knetim2col.py" />
+    <Compile Include="com\application\logic\knet\im2col\setup.py" />
+    <Compile Include="com\application\logic\knet\im2col_old\knetim2col.py" />
+    <Compile Include="com\application\logic\knet\im2col_old\setup.py" />
+    <Compile Include="knet_main_pytorch.py" />
+    <Compile Include="knet_manager_pytorch.py" />
+    <Compile Include="geno_qc.py" />
+    <Compile Include="com\application\utils\plotgen.py" />
+    <Compile Include="com\application\utils\prsProcessor.py" />
+    <Compile Include="com\application\utils\__init__.py" />
+    <Compile Include="knet_IO.py" />
+    <Compile Include="com\io\pyplink.py" />
+    <Compile Include="Knet.py" />
+    <Compile Include="phenoSim2.py" />
+    <Compile Include="variantFilter.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="com\" />
+    <Folder Include="com\application\" />
+    <Folder Include="com\application\logic\" />
+    <Folder Include="com\application\logic\knet\" />
+    <Folder Include="com\application\logic\knet\im2col\" />
+    <Folder Include="com\application\logic\knet\im2col\build\" />
+    <Folder Include="com\application\logic\knet\im2col\build\temp.win-amd64-3.6\" />
+    <Folder Include="com\application\logic\knet\im2col\build\temp.win-amd64-3.6\Release\" />
+    <Folder Include="com\application\logic\knet\im2col\__pycache__ %281%29\" />
+    <Folder Include="com\application\logic\knet\im2col\__pycache__\" />
+    <Folder Include="com\application\logic\knet\im2col_old\" />
+    <Folder Include="com\application\logic\knet\im2col_old\build\" />
+    <Folder Include="com\application\logic\knet\im2col_old\build\temp.win-amd64-3.6\" />
+    <Folder Include="com\application\logic\knet\im2col_old\build\temp.win-amd64-3.6\Release\" />
+    <Folder Include="com\application\logic\knet\im2col_old\__pycache__\" />
+    <Folder Include="com\application\utils\" />
+    <Folder Include="com\io\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="com\application\logic\knet\im2col\build\temp.win-amd64-3.6\Release\im2col_cython.cp36-win_amd64.exp" />
+    <Content Include="com\application\logic\knet\im2col\build\temp.win-amd64-3.6\Release\im2col_cython.cp36-win_amd64.lib" />
+    <Content Include="com\application\logic\knet\im2col\build\temp.win-amd64-3.6\Release\im2col_cython.obj" />
+    <Content Include="com\application\logic\knet\im2col\im2col_cython.c" />
+    <Content Include="com\application\logic\knet\im2col\im2col_cython.cp36-win_amd64.pyd" />
+    <Content Include="com\application\logic\knet\im2col\im2col_cython.pyx" />
+    <Content Include="com\application\logic\knet\im2col\__pycache__ %281%29\knetim2col.cpython-36 %281%29.pyc" />
+    <Content Include="com\application\logic\knet\im2col\__pycache__ %281%29\knetim2col.cpython-36.pyc" />
+    <Content Include="com\application\logic\knet\im2col\__pycache__\knetim2col.cpython-36 %281%29.pyc" />
+    <Content Include="com\application\logic\knet\im2col\__pycache__\knetim2col.cpython-36.pyc" />
+    <Content Include="com\application\logic\knet\im2col_old\build\temp.win-amd64-3.6\Release\im2col_cython.cp36-win_amd64.exp" />
+    <Content Include="com\application\logic\knet\im2col_old\build\temp.win-amd64-3.6\Release\im2col_cython.cp36-win_amd64.lib" />
+    <Content Include="com\application\logic\knet\im2col_old\build\temp.win-amd64-3.6\Release\im2col_cython.obj" />
+    <Content Include="com\application\logic\knet\im2col_old\im2col_cython.c" />
+    <Content Include="com\application\logic\knet\im2col_old\im2col_cython.cp36-win_amd64.pyd" />
+    <Content Include="com\application\logic\knet\im2col_old\im2col_cython.pyx" />
+    <Content Include="com\application\logic\knet\im2col_old\knet_main_pytorch.old" />
+    <Content Include="com\application\logic\knet\im2col_old\__pycache__\knetim2col.cpython-36.pyc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
