@@ -14,9 +14,3 @@ This respository represents the last snapshot of the bash and R scripts used to 
 
 **neural-network pytorch model:**
 1. scripts/python/Knet/: Visual studio project that implements the neural-network models used in the study
-
-
-
-**revisions:**
-1. scripts under subfolders /rev1: contain the scripts for the new analyses for the first revision.
-
