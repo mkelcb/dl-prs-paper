@@ -1,0 +1,32 @@
+PLINK v1.90b6.24 64-bit (6 Jun 2021)
+Options in effect:
+  --bfile /rds/project/rds-zuZwCZMsS0w/aneurysm/PRS_GXE/scratch/demo/scratch/ALL
+  --keep /rds/project/rds-zuZwCZMsS0w/aneurysm/PRS_GXE/scratch/demo/scratch/test
+  --keep-allele-order
+  --make-bed
+  --out /rds/project/rds-zuZwCZMsS0w/aneurysm/PRS_GXE/scratch/demo//test
+
+Hostname: login-q-1
+Working directory: /rds/project/rds-zuZwCZMsS0w/aneurysm/PRS_GXE/scratch/demo
+Start time: Wed Mar 26 12:21:36 2025
+
+Random number seed: 1742991696
+256861 MB RAM detected; reserving 128430 MB for main workspace.
+Allocated 72241 MB successfully, after larger attempt(s) failed.
+50 variants loaded from .bim file.
+140 people (0 males, 0 females, 140 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/rds/project/rds-zuZwCZMsS0w/aneurysm/PRS_GXE/scratch/demo//test.nosex .
+--keep: 20 people remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 20 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate in remaining samples is exactly 1.
+50 variants and 20 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/rds/project/rds-zuZwCZMsS0w/aneurysm/PRS_GXE/scratch/demo//test.bed +
+/rds/project/rds-zuZwCZMsS0w/aneurysm/PRS_GXE/scratch/demo//test.bim +
+/rds/project/rds-zuZwCZMsS0w/aneurysm/PRS_GXE/scratch/demo//test.fam ... done.
+
+End time: Wed Mar 26 12:21:36 2025

@@ -42,3 +42,5 @@ python3 $knet --out $yourDir$'results/NN_' knet --inference 1 --batch_size 4 --g
 # NN_yhat_TEST_noAct.txt: alternative version the linear NN PRS for the test set indis (this is not practical as it just switches off the activation without retraining the model)
 # and
 # NN_FIDs_TEST.txt: The IDs of your indis in the same order as the PRS
+
+
