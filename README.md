@@ -27,9 +27,9 @@ This respository represents the last snapshot of the bash and R scripts used to 
 
 The repository inludes some toy data as a minimal example that should take a few seconds to run:
 
-yourDir='<YOURPATH>/demo/'
+*yourDir='<YOURPATH>/demo/'*
 
-knet='<YOURPATH>/Knet.py'
+*knet='<YOURPATH>/Knet.py'*
 
 **TRAINING**
 
