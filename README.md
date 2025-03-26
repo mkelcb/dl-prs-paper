@@ -24,21 +24,31 @@ This respository represents the last snapshot of the bash and R scripts used to 
 2. Copy the contents of /scripts/python/Knet/ to somewhere conventient
 
 **DEMO:**
+
 The repository inludes some toy data as a minimal example that should take a few seconds to run:
 
 yourDir='<YOURPATH>/demo/'
+
 knet='<YOURPATH>/Knet.py'
 
 **TRAINING**
+
 *python3 $knet --out $yourDir$'results/' knet --batch_size 4 --gradient_batch_size 4 --hyperopt 0 --cc 0 --gpu 0 --firstLayerSize 10 --hidCount 1 --hidAct 4 --plink $yourDir$'/trainvalid' --pheno $yourDir$'/trainValid.pheno' --validSet $yourDir$'/valid' --saveWeights $yourDir$'results/SaveWeights'*
+
 generates and saves model weights with prefix 'SaveWeights' and diagnostic results for the trainValid set 
 
 **Generate PRS for the test set**
+
 *python3 $knet --out $yourDir$'results/NN_' knet --inference 1 --batch_size 4 --gradient_batch_size 4 --hyperopt 0 --cc 0 --gpu 1 --firstLayerSize 10 --hidCount 1 --hidAct 4 --plink $yourDir$'/test' --pheno $yourDir$'/test.pheno' --loadWeights $yourDir$'results/SaveWeights'*
 
 **3 PRS outputs:**
+
 **NN_yhat_TEST_noAct_retrain.txt:** the linear NN PRS for the test set indis
+
 **NN_yhat_TEST.txt:** the non-linear NN PRS for the test set indis
+
 **NN_yhat_TEST_noAct.txt:** alternative version the linear NN PRS for the test set indis (this is not practical as it just switches off the activation without retraining the model)
+
 and
+
 **NN_FIDs_TEST.txt:** The IDs of your indis in the same order as the PRS
