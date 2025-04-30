@@ -21,15 +21,18 @@ This respository represents the last snapshot of the bash and R scripts used to 
 **REQUIREMENTS & INSTALLATION:**
 1. Install Pytorch (v1.9.0+cu111): https://pytorch.org/get-started/
 (for installation times see the Pytorch documentation)
-2. Copy the contents of /scripts/python/Knet/ to somewhere conventient
+2. Install rest of dependencies listed in the 'requirements.txt', which can be done by Visual Studio:
+https://learn.microsoft.com/en-us/visualstudio/python/managing-required-packages-with-requirements-txt
+3. Copy the contents of /scripts/python/Knet/ to somewhere conventient
 
 **DEMO:**
 
 The repository inludes some toy data as a minimal example that should take a few seconds to run:
 
-yourDir='<YOURPATH>/demo/'
+*yourDir='<YOURPATH>/demo/'*
 
-knet='<YOURPATH>/Knet.py'
+*knet='<YOURPATH>/Knet.py' *
+*# (knet='scripts/python/Knet/Knet.py' when running from within the 'dl-prs-paper-master' folder.) *
 
 **TRAINING**
 
@@ -52,3 +55,6 @@ generates and saves model weights with prefix 'SaveWeights' and diagnostic resul
 and
 
 **NN_FIDs_TEST.txt:** The IDs of your indis in the same order as the PRS
+
+Detailed help for all parameters can be displayed by:
+*python3 $knet knet --help*

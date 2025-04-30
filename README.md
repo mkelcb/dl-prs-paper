@@ -3,7 +3,7 @@
 
 DOI: 10.1101/2024.10.23.24315973
 
-This respository represents the last snapshot of the bash and R scripts used to generate our results and is provided as-is. As the analysis involved a lot of input/output operations on very large files, these were generated asynchronously on a cluster. Thus these scripts are meant to be executed on the command line manually, block-by-block, waiting for the remote jobs to finish and verifying the integrity of the resulting files at each step. To reduce code duplication, certain functions that were reused multiple times are defined only once across all files, however, they may be called from different scripts.
+This respository represents the last snapshot of the bash, R and python scripts used to generate our results and is provided as-is. As the analysis involved a lot of input/output operations on very large files, these were generated asynchronously on a cluster. Thus these scripts are meant to be executed on the command line manually, block-by-block, waiting for the remote jobs to finish and verifying the integrity of the resulting files at each step. To reduce code duplication, certain functions that were reused multiple times are defined only once across all files, however, they may be called from different scripts.
 
 **The simulation analyses:**
 1. PRS_GXE_sims.sh: code relevant for the simulation analyses
@@ -21,7 +21,9 @@ This respository represents the last snapshot of the bash and R scripts used to 
 **REQUIREMENTS & INSTALLATION:**
 1. Install Pytorch (v1.9.0+cu111): https://pytorch.org/get-started/
 (for installation times see the Pytorch documentation)
-2. Copy the contents of /scripts/python/Knet/ to somewhere conventient
+2. Install rest of dependencies listed in the 'requirements.txt', which can be done by Visual Studio:
+https://learn.microsoft.com/en-us/visualstudio/python/managing-required-packages-with-requirements-txt
+3. Copy the contents of /scripts/python/Knet/ to somewhere conventient
 
 **DEMO:**
 
@@ -29,7 +31,8 @@ The repository inludes some toy data as a minimal example that should take a few
 
 *yourDir='<YOURPATH>/demo/'*
 
-*knet='<YOURPATH>/Knet.py'*
+*knet='<YOURPATH>/Knet.py' *
+*# (knet='scripts/python/Knet/Knet.py' when running from within the 'dl-prs-paper-master' folder.) *
 
 **TRAINING**
 
@@ -52,3 +55,6 @@ generates and saves model weights with prefix 'SaveWeights' and diagnostic resul
 and
 
 **NN_FIDs_TEST.txt:** The IDs of your indis in the same order as the PRS
+
+Detailed help for all parameters can be displayed by:
+*python3 $knet knet --help*
