@@ -31,9 +31,9 @@ The repository inludes some toy data as a minimal example that should take a few
 
 *yourDir='<YOURPATH>/demo/'*
 
-*knet='<YOURPATH>/Knet.py' *
+*knet='<YOURPATH>/Knet.py'*
 
-*# (knet='scripts/python/Knet/Knet.py' when running from within the 'dl-prs-paper-master' folder.) *
+*# (knet='scripts/python/Knet/Knet.py' when running from within the 'dl-prs-paper-master' folder.)*
 
 **TRAINING**
 
@@ -57,6 +57,6 @@ and
 
 **NN_FIDs_TEST.txt:** The IDs of your indis in the same order as the PRS
 
-Detailed help for all parameters can be displayed by:
+**Detailed help for all parameters can be displayed by:**
 
 *python3 $knet knet --help*

@@ -60,3 +60,92 @@ and
 **Detailed help for all parameters can be displayed by:**
 
 *python3 $knet knet --help*
+
+<code>
+  -h, --help            show this help message and exit
+  --plink PLINK         A plink genotype file.
+  --pheno PHENO
+  --prs PRS             A polygenic score file that will be used to weight the
+                        SNPs. It should have structure (with header): hm_chr
+                        hm_pos effect_allele other_allele effect_weight
+  --device DEVICE       the GPU device used to host the master copy of the
+                        model, default 0
+  --covars_IDs COVARS_IDS
+                        The Individual IDs for the covariates
+  --covars_cont COVARS_CONT
+                        Continuous covariates. Headerless file, where the
+                        columns are aligned to covars_IDs
+  --covars_factor COVARS_FACTOR
+                        Factor covariates. Headerless file, where the columns
+                        are aligned to covars_IDs
+  --prs_indi PRS_INDI   (optional) individual level PRS file with signature:
+                        IID PHENO1 SCORE1_SUM
+  --validSet VALIDSET
+  --loadWeights LOADWEIGHTS
+  --saveWeights SAVEWEIGHTS
+  --savFreq SAVFREQ
+  --epochs EPOCHS
+  --momentum MOMENTUM   momentum used for the optimizer. default is 0.9
+  --learnRate LEARNRATE
+                        learnRate used for the optimizer. default is 0.001
+  --LRdecay LRDECAY     Learning rate decay, default 0.96 (to disable set it
+                        to -1)
+  --cc CC
+  --recodecc RECODECC
+  --randomSeed RANDOMSEED
+  --hidCount HIDCOUNT
+  --hidAct HIDACT       the hidden layer activations ( 1 = sigmoid, 2 = RELU,
+                        3 = linear, 4 = softplus, 5 = LeakyReLU, 6 =SELU)
+  --gradient_batch_size GRADIENT_BATCH_SIZE
+                        effective size of minibatches used for gradient
+                        calculation, default :32
+  --batch_size BATCH_SIZE
+                        the size of the minibatches, default :32
+  --bnorm BNORM         if batchnorm (1, default) or group norm is to be used
+  --lr_decay LR_DECAY
+  --optimizer OPTIMIZER
+                        the optimizer, 0 for SGD (the default), 1 for ADAM,
+                        and 2 for AMSGrad
+  --inference INFERENCE
+  --orig ORIG
+  --firstLayerSize FIRSTLAYERSIZE
+  --dropout DROPOUT
+  --convLayers CONVLAYERS
+                        how many convolutional layers to add (0 for disabled)
+  --convFilters CONVFILTERS
+                        the number of filters that we will use in the first
+                        layer, each subsequent layer will have i * this many
+                        filters
+  --widthReductionRate WIDTHREDUCTIONRATE
+                        The rate at which the network "thins" IE if we start
+                        at 1000 neurons in layer 1, then at rate of 1
+                        (default), we half it every layer, with a rate of 2,
+                        it will half every second layer Ie we will get two
+                        layers with 1000 units each, and then two 500 units
+                        etc
+  --half HALF           if FP16 should be used (default no)
+  --gpu GPU             the number of gpus to be used. 0 for cpu.
+  --predictPheno PREDICTPHENO
+  --num_CPU NUM_CPU
+  --qc QC               if SNP QC is to be performed (1) or no (0)
+  --l2 L2
+  --hyperopt HYPEROPT   if best parameter settings are to be found via
+                        hyperopt semi-random search, 0 for NO hyperopt,
+                        otherwise the number of trials
+  --epochMaxImproveThreshold EPOCHMAXIMPROVETHRESHOLD
+                        Max number of epochs until no improvement before
+                        stopping. default is 12
+  --earlystop EARLYSTOP
+                        if early stop mechanism is to be applied (default
+                        True)
+  --linearInference LINEARINFERENCE
+  --oversampling OVERSAMPLING
+                        If oversampling logic is enabled for when there is an
+                        imbalance between cases and controls
+  --disablePRS DISABLEPRS
+                        If the PRS weights are disabled. (useful to make sure
+                        we use same SNPs as if had a PRS)
+  --redoEarlyConv REDOEARLYCONV
+                        if models that converged at epochs 0 or 1 are redone
+                        (1, the default) or not (0)
+</code>
