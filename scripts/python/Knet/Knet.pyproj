@@ -76,6 +76,7 @@
     <Content Include="com\application\logic\knet\im2col_old\im2col_cython.pyx" />
     <Content Include="com\application\logic\knet\im2col_old\knet_main_pytorch.old" />
     <Content Include="com\application\logic\knet\im2col_old\__pycache__\knetim2col.cpython-36.pyc" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
