@@ -61,8 +61,7 @@ and
 
 *python3 $knet knet --help*
 
-<code>
-  -h, --help            show this help message and exit
+<code>  -h, --help            show this help message and exit
   --plink PLINK         A plink genotype file.
   --pheno PHENO
   --prs PRS             A polygenic score file that will be used to weight the
